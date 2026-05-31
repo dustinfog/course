@@ -3,14 +3,16 @@
 > 教材对应：《Go 程序设计语言》中文站（`https://gopl-zh.github.io/`）第 1 章（入门与程序结构）
 
 ## 学习进度记录（持续更新）
-- 记录日期：2026-05-17
-- 当前进度：第 1 周 Day 3 已完成，准备进入 Day 4。
+- 记录日期：2026-05-31
+- 当前进度：第 1 周 Day 5 已完成，准备进入第 2 周 Day 1。
 - 已完成：
   - [x] Day 1：修复欢迎语格式化输出（`Printf`）。
   - [x] Day 2：循环范围从 `1..5` 改为 `1..10`。
   - [x] Day 3：提取 `printSeries(limit int)`，并保持 `100/i` 输出逻辑。
-- 当前代码状态（`main.go`）：`main()` 调用 `printSeries(10)`，输出 10 行 `100/i` 结果。
-- 下次开始先做：Day 4「函数参数化」，把函数改为 `printSeries(base int, limit int)`。
+  - [x] Day 4：完成函数参数化，已改为 `printSeries(base int, limit int)` 并调用两组参数。
+  - [x] Day 5：新增平方演示函数并接入主流程（周复盘可后补）。
+- 当前代码状态（`main.go`）：已完成 `printSeries`、`printSquares` 与 `printDivisionDemo` 等练习函数切换。
+- 下次开始先做：第 2 周 Day 1「变量声明与作用域」。
 - 下次继续前先运行：
 
 ```bash
