@@ -24,9 +24,80 @@ func main() {
 
 	//printSliceDemo()
 
-	printArrayAndSliceDemo()
+	//printArrayAndSliceDemo()
+
+	//printRangeDemo()
+
+	//printAppendDemo()
+
+	//printNumberSlice()
+
+	numss := []int{10, 20, 30, 40}
+	result := sumSlice(numss)
+	fmt.Println("sum of numss:", result)
 }
 
+func sumSlice(nums []int) int {
+	sum := 0
+	for _, value := range nums {
+		sum += value
+	}
+	return sum
+}
+
+func printNumberSlice() {
+	nums := []int{10, 20, 30, 40}
+	sum := 0
+	for _, value := range nums {
+		sum = sum + value
+	}
+	fmt.Println("nums:", nums)
+	fmt.Println("sum:", sum)
+
+	nums1 := []int{1, 2, 3, 4, 5}
+	sums1 := 0
+	for _, value := range nums1 {
+		sums1 += value
+	}
+	fmt.Println("nums1:", nums1)
+	fmt.Println("sums1:", sums1)
+}
+
+func printAppendDemo() {
+	names := []string{"Tom", "Jack", "Lucy"}
+	fmt.Println("before:", names)
+
+	names = append(names, "Mike")
+	names = append(names, "Lily")
+
+	fmt.Println("after:", names)
+
+	names = append(names, "Ben")
+	fmt.Println("len:", len(names))
+}
+
+func printRangeDemo() {
+	names := []string{"Tom", "Jack", "Lucy"}
+
+	for index, value := range names {
+		fmt.Println(index, value)
+	}
+
+	nums := []int{10, 20, 30}
+
+	for index, value := range nums {
+		fmt.Println(index, value)
+	}
+}
+
+func printSliceDemo() {
+	names := []string{"Tom", "Jack", "Lucy"}
+	for index := 0; index < len(names); index++ {
+		value := names[index]
+
+		fmt.Println(index, value)
+	}
+}
 func printArrayAndSliceDemo() {
 	arr := [3]string{"Tom", "Jack", "Lucy"}
 	sli := []string{"Tom", "Jack", "Lucy"}
@@ -35,12 +106,7 @@ func printArrayAndSliceDemo() {
 	fmt.Println("slice:", sli)
 	fmt.Println("切片比数组更常用，因为长度更灵活")
 }
-func printSliceDemo() {
-	names := []string{"Tom", "Jack", "Lucy"}
-	for i := 0; i < len(names); i++ {
-		fmt.Println(names[i])
-	}
-}
+
 func printTypeSummary() {
 	fmt.Println("== 基础类型 ==")
 	fmt.Println("int:", 1)
